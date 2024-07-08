@@ -4,12 +4,11 @@ public class Scripture
 {
     private Reference _reference;
     private List<Word> _words;
-    
+     
     // scripture constructor
     public Scripture(string refer, string text)
     {
         _reference = new Reference(refer);
-
         _words = new List<Word>();
 
         string[] textArray = text.Split(' ');
@@ -19,9 +18,8 @@ public class Scripture
         }
     }
 
-    public void HideRandomWords(int numberToHide)
+    public void HideRandomWords(int numberToHide, Random rand)
     {
-        Random rand = new Random();
         List<int> _nonHiddenIndices = new List<int>();
 
         // Collect indices of words that are not hidden
@@ -38,6 +36,7 @@ public class Scripture
         {
             int j = rand.Next(i, _nonHiddenIndices.Count);
             int temp = _nonHiddenIndices[i];
+
             _nonHiddenIndices[i] = _nonHiddenIndices[j];
             _nonHiddenIndices[j] = temp;
         }

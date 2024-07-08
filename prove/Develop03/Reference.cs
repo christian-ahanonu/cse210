@@ -25,7 +25,7 @@ public class Reference
     // split the reference scipture 
     public Reference(string refer) //James 5:2 or James 5:2-3
     {
-        string[] parts = refer.Split(' ');
+        string[] parts = refer.Split(' '); 
         _book = parts[0];
 
         string[] chapter = parts[1].Split(':');
