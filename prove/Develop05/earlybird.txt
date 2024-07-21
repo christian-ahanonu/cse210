@@ -1,0 +1,3 @@
+Last modified: 21-Jul-24 11:35:09 PM
+0
+SimpleGoal:go to church early <> be in church before 8:30am <> 50 <> False
